@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+      
+        <script type = "text/javascript">
+           <!--
+              function WriteCookie()
+              {
+                 if( document.myform.customer.value == "" ) 
+                 {
+                    alert("Enter some value!");
+                    return;
+                 }
+                 cookievalue = escape(document.myform.customer.value) + ";";
+                 document.cookie="name=" + cookievalue;
+                 document.write ("Setting Cookies : " + "name=" + cookievalue );
+                 
+                }
+                function WriteCookie1()
+                {
+                    
+                 if( document.myform.email.value == "" )
+                  {
+                    alert("Enter some value!");
+                    return;
+                 }
+                 cookievalue = escape(document.myform.email.value) + ";";
+                 document.cookie="email=" + cookievalue;
+                 document.write ("Setting Cookies 2 : " + "email=" + cookievalue );
+             
+                }
+                function WriteCookie2()
+                {
+                    
+                 if( document.myform.lname.value == "" )
+                  {
+                    alert("Enter some value!");
+                    return;
+                 }
+                 cookievalue = escape(document.myform.lname.value) + ";";
+                 document.cookie="last name=" + cookievalue;
+                 document.write ("Setting Cookies 2 : " + "lastname=" + cookievalue );
+             
+                }
+
+           //--
+           //-->
+        </script>
+        
+     </head>
+     
+     <body>
+     
+        <form name = "myform" action = "">
+           <label>name: </label>    
+           <input type = "text" name = "customer"/><br><br>
+           &nbsp;&nbsp<input type = "button" value = "Set Cookie" onclick = "WriteCookie();"/>
+             <br><br>
+             <label>lastname</label>
+            <input type = "text" name = "lname"/><br><br>
+            <input type = "button" value = "Set Cookie" onclick = "WriteCookie2();"/>
+            <br><br>
+            
+           <label>Email</label>
+           <input type="text" name="email"/><br><br>
+           <input type = "button" value = "Set Cookie" onclick = "WriteCookie1();"/>
+           
+
+             </form>
+             
+<h2>The localStorage Property</h2>
+
+<p>Saved name is:</p>
+<p id="demo"></p>
+<p>saved last name</p>
+<p id="demo1"></p>
+
+<script>
+// Set Item
+localStorage.setItem("firstname","David");
+document.getElementById("demo").innerHTML=localStorage.getItem("firstname");
+localStorage.setItem("lastname","smith");
+document.getElementById("demo1").innerHTML=localStorage.getItem("lastname");
+
+</script>
+<h2>The sessionStorage Object</h2>
+<p>Person First name is</p>
+<p id="demo3"></p>
+
+<p>Person Last Name is:</p>
+<p id="demo2"></p>
+
+<script>
+
+sessionStorage.setItem("Firstname", "Darren");
+let personName = sessionStorage.getItem("Firstname");
+document.getElementById("demo3").innerHTML = personName;
+sessionStorage.setItem("lastname", "Smith");
+let personlname = sessionStorage.getItem("lastname");
+document.getElementById("demo2").innerHTML = personlname;
+
+</script>
+
+</body>
+</html>
